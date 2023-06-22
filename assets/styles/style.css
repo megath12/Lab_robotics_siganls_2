@@ -1,0 +1,172 @@
+/* 
+font-family: 'Mukta', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace; 
+*/
+
+:root{
+  --color-guinda:#830433 ;
+  --color-rey: #040559 ;
+  --color-cielo: #0e97b7 ;
+  --color-verde:  #14d55b  ;
+  --color-neg: #202021 ;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+    body{
+      min-height: 100vh;
+      overflow-x:hidden;
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+  .navbar-brand{
+    color:whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:bolder;
+    font-size: larger;
+  }
+  
+
+.logoMed{
+    width:8%;
+    height:8%;
+    margin: 0 10px 0 10px;
+}
+
+ /*  Hamburguesa contraida color */
+ /*  .navbar-toggler-icon {
+    background-color:aquamarine;
+  }  */
+  .navbar-toggler{
+    border-color:aquamarine;
+    background-color: rgba(178, 191, 190, 0.217);
+  } 
+
+
+.div-nav a{
+    color:rgb(166, 166, 166);
+    color:antiquewhite;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+}
+
+
+.nav-link{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: medium;
+  }
+  
+.nav-link:hover{
+    /* color:rgb(127, 255, 197); */
+    color:aqua;
+}
+
+.logo-ig{
+    color: antiquewhite;
+    /*     color:linear-gradient(to bottom,#4E31AA, #77037B);*/
+     margin: 9px 15px 15px 15px;;
+}
+
+.logo-ig:hover{
+    color: #ff00fb;
+}
+
+
+.logo-yt{
+    color: antiquewhite;
+    margin: 9px 15px 10px 15px;;
+}
+.logo-yt:hover{
+    color: rgb(248, 2, 2);
+}
+
+.logo-aw{
+  color: antiquewhite;
+  margin: 9px 15px 15px 15px;;
+}
+.logo-aw:hover{
+  color:rgb(255, 191, 0);
+}
+
+.dropdown-item:hover{
+  color: rgb(0, 255, 140);
+}
+
+.dropdown-item:active{
+  background-color: rgb(115, 115, 115);
+}
+
+
+
+
+
+.footer{
+    background-color:rgb(34, 34, 34);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logos_ipn{
+    width: 90px;
+    height: 90px;
+    margin: 15px;
+}
+
+.imgs-ipn{
+    text-align: center;
+    align-items: center;
+}
+
+.info-foot{
+  text-align: center;
+  margin:12px 0 12px 0;
+  color:antiquewhite;
+  vertical-align:middle;
+}
+
+
+
+
+/* Estilo para pantallas de laptop o mayores */
+@media screen and (max-width: 1000px) {
+      
+    .navbar-brand{
+      font-size:small;
+    }
+  
+    .div-nav a{
+      color:antiquewhite;
+      font-size:small;
+      text-align: center;
+    }
+
+    .logos_ipn{
+      width: 50px;
+      height: 50px;
+    }
+
+    .info-foot{
+      font-size: small;
+      text-align: center;
+      color:antiquewhite;
+      margin: 0px;
+    }
+
+    .logoMed{
+      width:12%;
+      height:12%;
+      margin: 0 10px 0 10px;
+  }
+} 
+
+
+

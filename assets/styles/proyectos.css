@@ -1,0 +1,21 @@
+
+.accordion-item{
+  margin: 50px 0 40px 0;
+}
+
+
+.accordion-body img{
+  width: 100%;
+}
+
+
+
+@media (max-width:600px){
+  .accordion-item{
+    margin: 30px 0 15px 0;
+  }
+  .accordion-button{
+    font-size: 14px;
+  }
+
+}

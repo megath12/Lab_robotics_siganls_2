@@ -1,0 +1,96 @@
+
+.titli{
+  text-align: center;
+  font-size: larger;
+  padding: 30px 100px 30px 100px;
+  background-color: rgba(109, 119, 119, 0.588);
+  color: rgb(255, 255, 255);
+  /* color: rgb(244, 244, 220); */
+}
+
+.card{
+  align-items: center;
+  text-align: center;
+  margin: 20px 0 30px 0;
+  background-color:rgb(246, 241, 233);
+}
+
+.card-body{
+  color:rgb(74, 74, 74);
+}
+
+.txd{
+  text-align: left;
+  padding: 90px 20px 0 30px;
+}
+
+.txi{
+  text-align: right;
+  padding: 90px 30px 0 40px;
+}
+
+.ca1:hover{
+  border-width: 4px;
+  border-color:rgb(96, 225, 148);
+  font-size: 27px;
+}
+
+.tx1:hover{
+  color:rgb(45, 232, 120);
+}
+
+.ca2:hover{
+  border-width: 4px;
+  border-color: var(--color-cielo);
+  font-size: 27px;
+}
+
+.tx2:hover{
+  color:var(--color-cielo);
+}
+
+.ca3:hover{
+  border-width: 4px;
+  border-color: var(--color-rey);
+  font-size: 27px;
+}
+
+.tx3:hover{
+  color:var(--color-rey);
+}
+
+.ca4:hover{
+  border-width: 4px;
+  border-color: var(--color-guinda);
+  font-size: 27px;
+}
+
+.tx4:hover{
+  color:var(--color-guinda);
+}
+
+
+
+@media (max-width:600px){
+  .titli{
+    text-align: left;
+    font-size: medium;
+    padding: 25px; 
+  }
+
+  .txd{
+    text-align: center;
+     padding: 0px 0 10px 0;
+     font-size: larger;
+  }
+  
+  .txi{
+    text-align: center;     
+    padding: 20px 0 20px 0;
+    font-size: larger;
+  }
+
+  .card:hover{
+    font-size: medium;
+  }
+}
