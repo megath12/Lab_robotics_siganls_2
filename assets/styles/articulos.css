@@ -64,6 +64,16 @@ a{
 }
 
 
+.tiye{
+   color: rgb(171, 127, 127);
+   font-size: 27px;
+   padding: 0 0 30px 40px;
+}
+
+.dmen{
+   text-align: center;
+}
+
 
 
  @media (max-width: 600px){

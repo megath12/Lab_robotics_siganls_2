@@ -25,7 +25,7 @@ nav.innerHTML=`
             Investigación
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./articulos.html">Artículos</a></li>
+            <li><a class="dropdown-item" href="./articulos.php">Artículos</a></li>
             <li><a class="dropdown-item" href="./lineas.html">Líneas</a></li>
             <li><a class="dropdown-item" href="./proyectos.html">Proyectos</a></li>
           </ul>
