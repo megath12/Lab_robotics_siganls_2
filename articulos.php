@@ -1,5 +1,6 @@
+
 <?php
-    include_once './code.php';
+    include'./code.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,60 +23,106 @@
 </head>
 <body>
 
-    <?php
-        $sql = "SELECT * FROM art22;";
-        $result = mysqli_query($conn,$sql);
-        $resultCheck = mysqli_num_rows($result);
-    ?> 
 
     <nav id="nav-bar"></nav>
 
 
-<nav id="navbar-example2" class="navbar bg-body-tertiary --bs-body-color
- px-3 mb-3">
-  <a class="navbar-brand" href="">Navbar</a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading1">2023</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading2">2022</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-  <h4 id="scrollspyHeading1">2023</h4>
-  <p>...</p>
-  <h4 id="scrollspyHeading2">2022</h4>
-  <p>...</p>
-  <h4 id="scrollspyHeading3">Third heading</h4>
-  <p>...</p>
-  <h4 id="scrollspyHeading4">Fourth heading</h4>
-  <p>...</p>
-  <h4 id="scrollspyHeading5">Fifth heading</h4>
-  <p>...</p>
-</div>
-    
+    <div class="centro-div">
+        <div>
+            <h4>Journal Articles</h4>
 
-    <?php
-                 if($resultCheck>0){
-                    while($row=mysqli_fetch_assoc($result)){
-                        $first=$row['tit'];
-                        $last=$row['revi'];
-                        echo "<h5>$first<br>  $last</h5><br>";
+            <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Year
+            </button>
+            <ul class="dropdown-menu dmen">
+            
+                <li><a href="#a17">2017</a></li>
+                <li><a href="#a18">2018</a></li>
+                <li><a href="#a19">2019</a></li>
+                <li><a href="#a20">2020</a></li>
+                <li><a href="#a21">2021</a></li>
+                <li><a href="#a22">2022</a></li>
+                <li><a href="#a23">2023</a></li>
+            
+            </ul>
+            </div>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </nav>
+
+
+        </div>
+        <ul>
+
+           <!--  ARTICULOS -->
+
+            <?php
+                
+                echo "<hr> <div id='a23' class='tiye'><p>2023</p></div>";
+                $sql = "SELECT * FROM art23;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a22' class='tiye'><p>2022</p></div>";
+                $sql = "SELECT * FROM art22;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a21' class='tiye'><p>2021</p></div>";
+                $sql = "SELECT * FROM art21;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a20' class='tiye'><p>2020</p></div>";
+                $sql = "SELECT * FROM art20;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a19' class='tiye'><p>2019</p></div>";
+                $sql = "SELECT * FROM art19;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a18' class='tiye'><p>2018</p></div>";
+                $sql = "SELECT * FROM art18;";
+                bdart($sql,$conn);
+
+                echo "<hr> <div id='a17' class='tiye'><p>2017</p></div>";
+                $sql = "SELECT * FROM art17;";
+                bdart($sql,$conn);
+
+                function bdart($ha,$he){
+                    $result = mysqli_query($he,$ha);
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck>0){
+                        while($row=mysqli_fetch_assoc($result)){
+                            $tit=$row['tit'];
+                            $rev=$row['revi'];
+                            $au=$row['auth'];
+                            $doi=$row['doi'];
+                            echo "<li>
+                            <i class='fa-solid fa-marker pencil'></i>
+                            <div>";
+                            echo " <a href='$doi' target='_blank'
+                            >$tit</a>";
+                            echo " <p class='pub-site'>$rev</p>";
+                            echo " <p class='pub-aut'>$au</p>";
+                            echo " <p class='pub-doi'>$doi</p>";
+                            echo " </div></li>";
+                            echo "<br>";
+                        }
                     }
                 }
-?> 
+            ?> 
+            
     
+                  
+
+  
+        </ul>
+    </div>
+
 
     <footer id="foot-er" class="footer"></footer>
   

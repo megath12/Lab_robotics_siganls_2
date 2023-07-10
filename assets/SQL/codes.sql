@@ -27,3 +27,6 @@ INSERT INTO art22(tit, revi, auth, doi) VALUE ('Asymmetric Constrained Control o
 
 INSERT INTO art23(tit, revi, auth, doi) VALUE ('Forearm sEMG data from young healthy humans during the execution of hand movements', 'Scientific Data', 'Manuela Gomez-Correa, Mariana Ballesteros, Ivan Salgado, David Cruz-Ortiz','https://doi.org/10.1038/s41597-023-02223-x'); 
 
+
+
+
