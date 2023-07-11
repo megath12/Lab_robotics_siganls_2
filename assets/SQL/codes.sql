@@ -28,5 +28,14 @@ INSERT INTO art22(tit, revi, auth, doi) VALUE ('Asymmetric Constrained Control o
 INSERT INTO art23(tit, revi, auth, doi) VALUE ('Forearm sEMG data from young healthy humans during the execution of hand movements', 'Scientific Data', 'Manuela Gomez-Correa, Mariana Ballesteros, Ivan Salgado, David Cruz-Ortiz','https://doi.org/10.1038/s41597-023-02223-x'); 
 
 
+DROP TABLE useres;
+
+CREATE TABLE proyectos (
+    uid int(10)  AUTO_INCREMENT PRIMARY KEY not null,
+    nombre VARCHAR(256) not null,
+    descripcion VARCHAR(900) NOT NULL,
+    ima LONGBLOB not null
+);
 
 
+INSERT INTO proyectos(nom,descrip,ima) VALUES ('Evasión de obstaculos de un robot móvil basado en funciones controladas de Lyapunov tipo barrera','Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea eveniet alias similique a, sapiente blanditiis laborum commodi tempore ipsam officiis vel ratione minima nobis hic ipsa, suscipit, dolorem harum.',LOAD_FILE('C:\Users\megat\Music\upibi\SS\Evidencias\Lab_se_ro\assets\images\proyectos\avoid-robot.pnh'));
