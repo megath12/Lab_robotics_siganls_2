@@ -1,3 +1,7 @@
+<?php
+  include './code.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,23 +29,27 @@
     <div class="tarje">        
         <div class="accordion row" id="accordionPanelsStayOpenExample">
 
+    <?php
+      $sql = "SELECT * FROM proyectos;";
+      bdart($sql,$conn);
 
-        <div class="accordion-item col-md-5 col-sm-11">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              Evasión de obstaculos de un robot móvil basado en funciones controladas de Lyapunov tipo barrera
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              <img src="./assets/images/proyectos/avoid-robot.png" alt="">
-              <p class="protex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea eveniet alias similique a, sapiente blanditiis laborum commodi tempore ipsam officiis vel ratione minima nobis hic ipsa, suscipit, dolorem harum.</p>
-            </div>
-          </div>
-        </div><br>
-
-
-
+      function bdart($ha,$he){
+          $result = mysqli_query($he,$ha);
+          $resultCheck = mysqli_num_rows($result);
+          if($resultCheck>0){
+              while($row=mysqli_fetch_assoc($result)){
+                  $tit=$row['nom'];
+                  $tex=$row['descrip'];
+                  $im=$row['ima'];
+                  echo "<div class='accordion-item col-md-5 col-sm-11'>
+                  <h2 class='accordion-header'><button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseOne' aria-expanded='true' aria-controls='panelsStayOpen-collapseOne'>$tit</button></h2>";
+                  echo "<div id='panelsStayOpen-collapseOne' class='accordion-collapse collapse show'><div class='accordion-body'>";
+                  echo '<img src="data:image/jpeg;base64,'.base64_encode($im).'">'; 
+                  echo  "<p class='protex'>$tex</p></div></div></div><br>";
+              }
+          }
+      }
+      ?>
 
       </div> <!-- cierre item -->
   </div> <!-- cierre row -->
