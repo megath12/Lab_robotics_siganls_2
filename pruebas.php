@@ -33,7 +33,7 @@
             <?php
                 
                 echo "<hr> <div id='a23' class='tiye'><p>2023</p></div>";
-                $sql = "SELECT * FROM proyectos;";
+                $sql = "SELECT * FROM investigadores;";
                 bdart($sql,$conn);
 
                 function bdart($ha,$he){
@@ -41,7 +41,7 @@
                     $resultCheck = mysqli_num_rows($result);
                     if($resultCheck>0){
                         while($row=mysqli_fetch_assoc($result)){
-                            $im=$row['ima'];
+                            $im=$row['imagen'];
                             echo '<img src="data:image/jpeg;base64,'.base64_encode($im).'">';
                         }
                     }

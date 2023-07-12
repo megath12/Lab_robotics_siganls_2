@@ -39,3 +39,22 @@ CREATE TABLE proyectos (
 
 
 INSERT INTO proyectos(nom,descrip,ima) VALUES ('Evasión de obstaculos de un robot móvil basado en funciones controladas de Lyapunov tipo barrera','Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea eveniet alias similique a, sapiente blanditiis laborum commodi tempore ipsam officiis vel ratione minima nobis hic ipsa, suscipit, dolorem harum.',LOAD_FILE('C:\Users\megat\Music\upibi\SS\Evidencias\Lab_se_ro\assets\images\proyectos\avoid-robot.pnh'));
+
+
+CREATE TABLE investigadores (
+	uid int(10) AUTO_INCREMENT PRIMARY KEY not null,
+    nombre varchar(70) not null,
+    grado varchar(300) not null,
+    line1 varchar (70) not null,
+    line2 varchar (70) not null,
+    line3 varchar (70) not null,
+	imagen LONGBLOB not null 
+);
+
+CREATE TABLE estudiantes(
+	uid int(10) AUTO_INCREMENT PRIMARY KEY not null,
+    nombre varchar(70) not null,
+    grado varchar(200) not null,
+    proyecto varchar (200) not null,
+	imagen LONGBLOB not null 
+);

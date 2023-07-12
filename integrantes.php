@@ -1,3 +1,6 @@
+<?php
+  include './code.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +31,15 @@
 
         <div class="row">
 
+
+
           <div class="col-md-3 col-sm-6">  
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
-                <img src="./assets/images/integrantes/mariana-ballesteros.jpg" alt="" class="ta-im">
+                <img src="./assets/images/integrantes/mariana.jpg" alt="" class="ta-im">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <p class="ta-nom">Nombre Completo</p>
+                  <button class="accordion-button accordion-button-color collapsed invsb" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="ta-nom"><b>Nombre Completo</b></p>
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -61,45 +66,40 @@
         </div> <!-- // cierre row -->
 
 
+
+
         <div> <!-- // apertura alumnos -->
           <div class="estudiantes">
             <p>Estudiantes</p>      
           </div><br>
           <div class="row">
 
+
+
             <div class="col-md-3 col-sm-6">  
               <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <img src="./assets/images/integrantes/mariana-ballesteros.jpg" alt="" class="ta-im">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                      <p class="te-nom">Nombre Completo</p>
+                    <button class="accordion-button collapsed estb" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                      <p class="te-nom"><b>Nombre Completo</b></p>
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
   
                       <div class="ta-gra">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non veritatis sed necessitatibus aperiam quasi earum dignissimos ipsa libero? Excepturi aperiam sed quam autem, eaque culpa alias commodi dolorum ad obcaecati?
-                      </div>
-                      <div class="ta-inv">
-                        <ul>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                        </ul>
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      </div> <br>
+                      <div class="te-proy">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsam alias pariatur culpa inventore eius praesentium ad cum voluptatem,
                       </div>
                     </div>
                   </div>
                 </div>
                 <br><br>
-
-          </div>
-
-
-
-
-        </div>  <!-- cierre alumnos -->
+              </div>
+            </div>  <!-- cierre alumnos -->
 
 
 

@@ -1,17 +1,10 @@
 
-.accordion-button{
-    background:#fefefe!important;
-}
-
-
-.accordion-button:active{
-    background: var(--color-cielo)!important;
-    color: white!important;
-}
-
-
 
 /*                                                                  INVESTIGADORES */
+
+/* .invsb{
+    background-color: rgb(161, 255, 255);
+} */
 
 
 .investigadores{
@@ -52,7 +45,6 @@
 
 /*                                                                   ESTUDIANTES */
 
-
 .estudiantes{
     font-family:'Times New Roman', Times, serif;
     font-weight: bolder;
@@ -73,3 +65,8 @@
     font-size: 20px;
 }
 
+.te-proy{
+    text-align: center;
+}
+
+$accordion-button-color: rgba(205, 51, 51, 0.474);

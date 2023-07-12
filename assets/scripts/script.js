@@ -27,7 +27,7 @@ nav.innerHTML=`
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./articulos.php">Artículos</a></li>
             <li><a class="dropdown-item" href="./lineas.html">Líneas</a></li>
-            <li><a class="dropdown-item" href="./proyectos.html">Proyectos</a></li>
+            <li><a class="dropdown-item" href="./proyectos.php">Proyectos</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
