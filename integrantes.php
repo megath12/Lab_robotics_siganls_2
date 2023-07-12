@@ -31,8 +31,98 @@
 
         <div class="row">
 
+        <?php   
+                $sql = "SELECT * FROM investigadores;";
+                bdart($sql,$conn);
+                function bdart($ha,$he){
+                    $nu=1;
+                    $result = mysqli_query($he,$ha);
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck>0){
+                        while($row=mysqli_fetch_assoc($result)){
+                          $nme=$row['nombre'];
+                          $gdo=$row['grado'];
+                          $l1=$row['line1'];
+                          $l2=$row['line2'];  
+                          $l3=$row['line3'];    
+                          $im=$row['imagen'];
+                          $nuu=strval($nu);
+                            echo '<div class="col-md-3 col-sm-6"><div class="accordion" id="accordionExample"><div class="accordion-item">';
+                            echo '<img src="data:image/jpeg;base64,'.base64_encode($im).'"class="ta-im">';
+                            echo "<h2 class='accordion-header'>
+                            <button class='accordion-button accordion-button-color collapsed invsb' type='button' data-bs-toggle='collapse'; data-bs-target='#$nuu' aria-expanded=true' aria-controls='$nuu'>";
+                            echo "<p class='ta-nom'><b>$nme</b></p></button></h2>";
+                            echo "<div id='$nuu' class='accordion-collapse collapse' data-bs-parent='#accordionExample'>
+                            <div class='accordion-body'>";
+                            echo "<div class='ta-gra'>$gdo</div>";
+                            echo "<div class='ta-inv'><br><ul><li>$l1</li><li>$l2</li><li>$l3</li>
+                            </ul></div></div></div></div><br><br></div></div>";
+                            $nu++;
+                        }
+                    }
+                }
+            ?> 
 
 
+        </div> <!-- // cierre row -->
+
+
+
+
+        <div> <!-- // apertura alumnos -->
+          <div class="estudiantes">
+            <p>Estudiantes</p>      
+          </div><br>
+          <div class="row">
+
+
+          <?php   
+                $sql = "SELECT * FROM estudiantes;";
+                bdart2($sql,$conn);
+                function bdart2($ha,$he){
+                    $nu=100;
+                    $result = mysqli_query($he,$ha);
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck>0){
+                        while($row=mysqli_fetch_assoc($result)){
+                          $nme=$row['nombre'];
+                          $gdo=$row['grado'];
+                          $pry=$row['proyecto'];  
+                          $im=$row['imagen'];
+                          $nuu=strval($nu);
+                            echo '<div class="col-md-3 col-sm-6"><div class="accordion" id="accordionExample"><div class="accordion-item">';
+                            echo '<img src="data:image/jpeg;base64,'.base64_encode($im).'"class="ta-im">';
+                            echo "<h2 class='accordion-header'>
+                            <button class='accordion-button accordion-button-color collapsed invsb' type='button' data-bs-toggle='collapse'; data-bs-target='#$nuu' aria-expanded=true' aria-controls='$nuu'>";
+                            echo "<p class='te-nom'><b>$nme</b></p></button></h2>";
+                            echo "<div id='$nuu' class='accordion-collapse collapse' data-bs-parent='#accordionExample'>
+                            <div class='accordion-body'>";
+                            echo "<div class='ta-gra'>$gdo</div>";
+                            echo "<div class='te-proy'><br><i>$pry</i></div></div></div></div><br><br></div></div>";
+                            $nu++;
+                        }
+                    }
+                }
+            ?> 
+
+        </div>
+
+    <footer id="foot-er" class="footer"></footer>
+  
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/b7d32fcfa1.js" crossorigin="anonymous"></script>
+      <script src="./assets/scripts/integrantes.js"></script>
+      <script src="./assets/scripts/script.js"></script>
+      
+</body>
+</html>
+
+
+
+
+<!--
+  
           <div class="col-md-3 col-sm-6">  
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
@@ -63,16 +153,8 @@
 
 
 
-        </div> <!-- // cierre row -->
 
 
-
-
-        <div> <!-- // apertura alumnos -->
-          <div class="estudiantes">
-            <p>Estudiantes</p>      
-          </div><br>
-          <div class="row">
 
 
 
@@ -99,20 +181,4 @@
                 </div>
                 <br><br>
               </div>
-            </div>  <!-- cierre alumnos -->
-
-
-
-    </div>
-
-
-    <footer id="foot-er" class="footer"></footer>
-  
-  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/b7d32fcfa1.js" crossorigin="anonymous"></script>
-      <script src="./assets/scripts/integrantes.js"></script>
-      <script src="./assets/scripts/script.js"></script>
-      
-</body>
-</html>
+            </div>  --> <!-- cierre alumnos -->
