@@ -58,3 +58,13 @@ CREATE TABLE estudiantes(
     proyecto varchar (200) not null,
 	imagen LONGBLOB not null 
 );
+
+
+
+CREATE TABLE convocatoria(
+	uid int(5) AUTO_INCREMENT PRIMARY KEY not null,
+    liga VARCHAR(300) not null,
+    imagen LONGBLOB not null
+);
+
+

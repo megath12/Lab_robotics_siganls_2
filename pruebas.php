@@ -32,8 +32,7 @@
 
             <?php
                 
-                echo "<hr> <div id='a23' class='tiye'><p>2023</p></div>";
-                $sql = "SELECT * FROM investigadores;";
+                $sql = "SELECT * FROM convocatoria WHERE uid=1;";
                 bdart($sql,$conn);
 
                 function bdart($ha,$he){
@@ -49,21 +48,7 @@
             ?> 
             
 
-        /*<div class="accordion-item col-md-5 col-sm-11">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              <img src="./assets/images/proyectos/avoid-robot.png" alt="">
-              <p class="protex">
-                
-              </p>
-            </div>
-          </div>
-        </div><br> */
     
                   
 

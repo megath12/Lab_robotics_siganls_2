@@ -19,7 +19,7 @@ nav.innerHTML=`
     </button>
     <div class="collapse navbar-collapse navega" id="navbarNavAltMarkup">
       <div class="div-nav navbar-nav ms-auto">
-        <a class="nav-link" href="./index.html">Inicio</a>
+        <a class="nav-link" href="./index.php">Inicio</a>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Investigación
